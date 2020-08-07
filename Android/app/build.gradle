@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "hr.fer.zemris.diplomski"
+        minSdkVersion 24
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        android.defaultConfig.javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    aaptOptions {
+        noCompress "tflite"
+    }
+}
+
+repositories {
+    mavenLocal()
+    maven { url "https://jitpack.io" }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.preference:preference:1.1.0-alpha05'
+    testImplementation 'junit:junit:4.13'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'commons-io:commons-io:2.6'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:0.0.0-nightly'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.0.0-nightly'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.5'
+}

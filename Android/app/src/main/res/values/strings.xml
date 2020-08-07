@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Instrument Classifier</string>
+    <string name="title_activity_settings">Preferences</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+    <string name="pref_query_limit">Inference length (in seconds)</string>
+    <string name="inference_description">Length of recording before each prediction</string>
+</resources>
