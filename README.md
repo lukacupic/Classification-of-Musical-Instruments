@@ -1,4 +1,4 @@
-# Classification-of-Musical-Instruments
+# Classification of Music Based on Machine Learning
 
 Master's Thesis at FER, University of Zagreb, 2020. The central point of the thesis a mobile application that recognizes which musical instrument is playing in real-time. The recognition is based on the probability that the currently recorded instrument belongs to one of the known instrument classes.
 
